@@ -1,0 +1,7 @@
+{
+  "name": "igclone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

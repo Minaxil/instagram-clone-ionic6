@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <div slot="start" class="div_logo">
+      <img src="assets/images/logo.png" class="img_logo"/>
+    </div>
+    <div slot="end" class="div_icon">
+      <ion-icon name="add-circle-outline" class="icon_all"></ion-icon>
+      <ion-icon name="chatbubbles-outline" class="icon_all"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide *ngFor="let story of stories">
+        <app-stories [data]="story"></app-stories>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="cards" *ngFor="let post of posts">
+    <app-post-card [data]="post"></app-post-card>
+  </div>
+</ion-content>

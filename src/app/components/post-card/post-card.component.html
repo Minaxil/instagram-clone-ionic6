@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card_header">
+    <div class="div_info">
+      <img [src]="data?.picture?.thumbnail" class="img_profile" />
+      <ion-label>{{data?.name?.first}} {{data?.name?.last}}</ion-label>
+    </div>
+    <div>
+      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="card_content" [style.backgroundImage]="'url(https://picsum.photos/400)'"></div>
+  <div class="card_footer">
+    <div class="card_comment_icons">
+      <ion-icon name="heart-outline" class="heartIcon" (click)="like()" *ngIf="!likeOrNot"></ion-icon>
+      <ion-icon name="heart" class="heartIcon" color="danger" (click)="like()" *ngIf="likeOrNot"></ion-icon>
+      <ion-icon name="chatbubble-outline"></ion-icon>
+      <ion-icon name="send-outline"></ion-icon>
+    </div>
+    <div>
+      <ion-icon name="bookmark-outline" class="bookIcon"></ion-icon>
+    </div>
+  </div>
+  <div class="allOtherStuff">
+    <ion-label class="like">2 like</ion-label>
+    <ion-label class="lbl_caption"><span class="span">{{data?.name?.first}} {{data?.name?.last}}</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate in saepe inventore fuga ducimus praesentium sapiente numquam placeat id, odit.</ion-label>
+    <ion-label class="comment">View all 20 Comments</ion-label>
+    <div class="card_row">
+      <div class="div_info">
+        <img [src]="data?.picture?.thumbnail" class="img_profile_footer" />
+        <ion-input placeholder="Add a comment..."></ion-input>
+      </div>
+    </div>
+    <ion-label class="hour">2 hour ago</ion-label>
+  </div>
+</div>

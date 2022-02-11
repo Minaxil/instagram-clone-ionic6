@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="grid">
+    <div class="flex_row">
+      <img *ngFor="let image of search" [src]="image.url"  class="image_search">
+    </div>
+  </div>
+</ion-content>

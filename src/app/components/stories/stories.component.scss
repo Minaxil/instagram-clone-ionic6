@@ -1,0 +1,31 @@
+.div_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div_white{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0.2rem 0.2rem 0.0rem 0.2rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+}
+.div_image{
+    border-radius: 100%;
+}
+.img_story{
+    border:2px solid white;
+    border-radius: 100%;
+}
+.lbl_name{
+    font-size: 15px;
+    display: block;
+    margin-top: 6px;
+}

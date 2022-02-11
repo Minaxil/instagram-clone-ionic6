@@ -1,0 +1,111 @@
+.card{
+    width: 100%;
+
+    .card_header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+
+        ion-icon{
+            font-size: 20px;
+        }
+    }
+    .div_info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .img_profile{
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            margin-right: 15px;
+        }
+        .img_profile_footer{
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            margin-right: 15px;
+        }
+
+        ion-label{
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+        }
+    }
+
+    .card_content{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        margin-top: 10px;
+    }
+    .card_footer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .card_comment_icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .heartIcon{
+            font-size: 30px !important;
+        }
+        ion-icon{
+            font-size: 25px;
+            margin-right: 20px;
+        }
+    }
+    .bookIcon{
+        font-size: 25px;
+    }
+}
+.allOtherStuff{
+    width: 100%;
+    padding: 10px 20px;
+
+    .like{
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+    }
+    .lbl_caption{
+        font-size: 15px;
+        margin-top: 5px;
+        display: block;
+        .span{
+            font-weight: bold;
+        }
+    }
+}
+.card_row{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+}
+.hour{
+    font-size: 10px;
+    color: gray;
+}
+.comment{
+    margin-top: 7px;
+    font-size: 12px;
+    columns: gray;
+    display: block;
+}

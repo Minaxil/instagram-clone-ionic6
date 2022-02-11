@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
+  isClick = false;
+  tabPage = 'home'
   constructor() {}
 
+  clickHeart(){
+    this.isClick = !this.isClick;
+  }
+
+  tabChange(event){
+    console.log(event.tab)
+    this.tabPage = event.tab;
+  }
 }

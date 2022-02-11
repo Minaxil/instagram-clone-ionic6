@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
+import { IonInfiniteScroll } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+  @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
 
   stories = [
     {
@@ -95,16 +98,32 @@ export class HomePage implements OnInit {
       }
     }
 
-    this.getPosts();
+    this.getPosts(this.pages, this.limit);
   }
 
-  getPosts(){
-    this.apiService.getUsers(this.pages, this.limit).subscribe((response: any)=>{
+  getPosts(pages, limit){
+    this.apiService.getUsers(pages, limit).subscribe((response: any)=>{
       console.log(response);
       this.posts = response.results;
     },err=>{
       console.log("Something Went Wrong -> ",err);
     });
+  }
+
+  appendPosts(pages, limit){
+    this.apiService.getUsers(pages, limit).subscribe((response: any)=>{
+      response.results.forEach(post => {
+        this.posts.push(post);
+      });
+    },err=>{
+      console.log("Something Went Wrong -> ",err);
+    });
+  }
+
+  async loadMore(event){
+    this.pages++;
+    await this.appendPosts(this.pages, this.limit);
+    event.target.complete();
   }
 
 }

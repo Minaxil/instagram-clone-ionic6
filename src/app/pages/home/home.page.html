@@ -22,4 +22,11 @@
   <div class="cards" *ngFor="let post of posts">
     <app-post-card [data]="post"></app-post-card>
   </div>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

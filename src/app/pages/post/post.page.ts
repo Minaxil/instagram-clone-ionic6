@@ -7,6 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPage implements OnInit {
 
+  search = [
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+    {
+      url : "https://picsum.photos/400"
+    },
+  ]
+
   constructor() { }
 
   ngOnInit() {

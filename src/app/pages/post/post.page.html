@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>post</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content >
+  <div>
+    <swiper class="swiper_main" [slidesPerView]="1" [loop]="true" direction="vertical">
+      <ng-template *ngFor="let image of search" swiperSlide>
+        <div class="divUpper">
+          <ion-label>Reels</ion-label>
+          <ion-icon name="camera-outline"></ion-icon>
+        </div>
 
-<ion-content>
+        <img [src]="image.url" class="imageVerical"/>
 
+        <div class="divFooter">
+          <div class="info">
+            <img src="https://picsum.photos/100" class="img_profile"/>
+            <ion-label class="lbl_name">name_name</ion-label>
+          </div>
+          <ion-label class="lbl_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, at dolorum maxime dolorem nihil sapiente? Deserunt dolorum!</ion-label>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
 </ion-content>
